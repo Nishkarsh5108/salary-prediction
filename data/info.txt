@@ -1,0 +1,25 @@
+The dataset contains 11 columns:
+
+1. Id/
+2. Title
+3. FullDescription
+4. LocationRaw/
+5. LocationNormalized/
+6. ContractType/
+7. ContractTime/
+8. Company/
+9. Category/
+10. SourceName/
+11. SalaryNormalized/
+
+The goal is to use columns 1–10 to predict column 11 (SalaryNormalized).
+
+An additional file, Location_Tree.csv, is provided. It contains structured location information corresponding to the raw and normalized location fields (columns 4 and 5). This can be used to extract more meaningful geographical features.
+
+The Title and FullDescription columns are especially important, as they contain most of the job-related information. However, since they are unstructured text, they need to be processed using NLP techniques. Convert this text into numerical representations such as embeddings or vectors so that it can be used in the model.
+
+Since the target variable (SalaryNormalized) is numerical, this is a regression problem. Choose an appropriate regression model to make predictions.
+
+Keep in mind that the dataset is large, so efficient preprocessing and training methods are important. If you plan to use NLP models or transformers, a GPU will significantly speed up the process. If you don’t have access to one locally, consider using platforms like Google Colab or Kaggle Notebooks.
+
+Model performance will be evaluated using R² score and Mean Squared Error (MSE).
